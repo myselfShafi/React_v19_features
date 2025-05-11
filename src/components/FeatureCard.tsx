@@ -8,12 +8,16 @@ type FeatureCardProps = {
 
 const FeatureCard = ({ title, description, demo }: FeatureCardProps): JSX.Element => {
   return (
-    <div className="container font-primary font-bold bg-white p-6 rounded-2xl shadow-md border border-gray-200">
-    <h1 className="mb-4">{title}</h1>
-    <h2 className="font-bold mb-4">{title}</h2>
-    <h3 className="font-bold mb-4">{description}</h3>
-    <p className="mb-4">{description}</p>
-    {demo}
+    <div className="w-full max-w-lg mx-auto bg-gradient-to-br from-white to-slate-50 border border-slate-200 rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 ease-in-out p-5 space-y-5">
+      <div className="space-y-2">
+        <h2 className="text-xl font-extrabold text-slate-800">{title}</h2>
+        <p className="text-slate-600 leading-relaxed">{description}</p>
+      </div>
+      {demo && (
+        <div className="bg-slate-100 border border-slate-200 rounded-xl p-4 text-sm text-slate-700">
+          {demo}
+        </div>
+      )}
     </div>
   )
 }
