@@ -6,6 +6,15 @@
 
 @theme {
     --font-primary: "Inconsolata", monospace;
+    --color-aqua-900: oklch(28.44% 0.134 267.87);
+    --color-aqua-800: oklch(40.44% 0.172 259.42);
+    --color-aqua-700: oklch(55.36% 0.181 244.57);
+    --color-aqua-600: oklch(63.65% 0.159 235.61);
+    --color-aqua-500: oklch(71.84% 0.136 231.60);
+    --color-aqua-400: oklch(79.41% 0.108 229.71);
+    --color-aqua-300: oklch(88.16% 0.071 230.94);
+    --color-aqua-200: oklch(91.91% 0.053 235.92);
+    --color-aqua-100: oklch(95.21% 0.038 239.66);
 }
 
 /**
