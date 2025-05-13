@@ -45,16 +45,19 @@
 **/
 @layer components {
     h1, .heading-1 {
-    	@apply text-3xl mt-1 mb-4;
+    	@apply text-3xl mt-1 mb-4 font-extrabold;
     }
     h2, .heading-2 {
-    	@apply text-2xl mt-0.5 mb-4;
+    	@apply text-xl mt-0.5 mb-4 font-extrabold;
     }
     h3, .heading-3 {
     	@apply text-xl mt-0.5 mb-2;
     }
     h4, .heading-4 {
     	@apply text-lg mb-1;
+    }
+    p, .para {
+        @apply text-slate-600 leading-relaxed font-medium
     }
     a.link:hover {
     	@apply no-underline;
