@@ -1,13 +1,13 @@
 import { useEffect, useState, type JSX } from 'react';
 
 const ThemeButton = (): JSX.Element => {
-    const [isDark, setIsDark] = useState<boolean>(false);
-    let sysTheme: boolean = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    let sysTheme: boolean = sessionStorage.theme === 'dark' || (!('theme' in sessionStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    const [isDark, setIsDark] = useState<boolean>(sysTheme);
 
     useEffect(() => {
-        // setIsDark(sysTheme);
+        sessionStorage.setItem('theme', isDark ? 'dark' : 'light');
         document.documentElement.classList.toggle('dark', isDark);
-    }, [isDark, sysTheme]);
+    }, [isDark]);
 
     const toggleDark: () => void = () => setIsDark(!isDark);
 
