@@ -1,6 +1,11 @@
+import type { JSX } from "react";
+import addMetadata from "../features/addMetadata";
+import HookDemo from "../features/useHookDemo";
+
 interface V19Features {
     title: string;
     desc: string;
+    element?: () => JSX.Element;
     demo?: string;
 }
 
@@ -11,7 +16,8 @@ export const v19Features: V19Features[] = [
     },
     {
         title: '🪝 use() Hook',
-        desc: 'Directly use promises or async data inside the component. Makes working with async data much simpler, especially for loading things from APIs.'
+        desc: 'Directly use promises or async data inside the component. Makes working with async data much simpler, especially for loading things from APIs.',
+        element: HookDemo
     },
     {
         title: '🧾 Form Actions (useFormStatus, useFormState)',
@@ -19,7 +25,8 @@ export const v19Features: V19Features[] = [
     },
     {
         title: '🌐 Document Metadata API',
-        desc: ' Set the page title, meta tags, and viewport directly in your component using special tags like <DocumentTitle />'
+        desc: ' Set the page title, meta tags, and viewport directly in your component using special tags like <DocumentTitle />',
+        element: addMetadata
     },
     {
         title: '🖥️ Server Components',
