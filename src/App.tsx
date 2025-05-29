@@ -6,7 +6,7 @@ import "./index.css";
 function App() {
   const [featIndex, setFeatIndex] = useState<number | null>(null);
   return (
-    <div className="relative p-5 min-h-screen bg-aqua-200 dark:bg-aqua-700">
+    <div className="relative sm:p-5 min-h-screen bg-aqua-200 dark:bg-aqua-700">
       <ThemeButton />
       <h1 className="text-center text-aqua-700 dark:text-aqua-100 tracking-wide">React version.19</h1>
       <div className="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -19,12 +19,6 @@ function App() {
                 onClick={() => setFeatIndex(prev => (prev === index ? null : index))}
                 isExpanded={featIndex === index && !!feature.element}
               />
-              {/* {
-                featIndex === index && feature.element &&
-                <motion.div className="col-span-full">
-                  <ContentCard content="aasdsa" />
-                </motion.div>
-              } */}
             </Fragment>)
         }
       </div>
