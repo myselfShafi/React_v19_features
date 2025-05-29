@@ -10,9 +10,8 @@ const [tab, setTab] = useState<"code" | "preview">("code");
   return (
     <div className="w-full rounded-2xl border border-gray-200 shadow-md bg-white overflow-hidden transition-all" {...rest}>
       {/* Header */}
-      <div className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+      <div className="flex items-center justify-between p-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
         <h3 className="text-xl font-semibold">Expanded View</h3>
-        <span className="text-sm opacity-80">{new Date().toLocaleDateString()}</span>
       </div>
 
       {/* Tab Buttons */}
@@ -43,11 +42,13 @@ const [tab, setTab] = useState<"code" | "preview">("code");
       <div className="p-4 transition-all">
         {tab === "code" ? (
           <pre className="bg-gray-900 text-green-300 text-sm p-4 rounded-md overflow-x-auto">
-            {`function greet(name) {
+            {`
+            function greet(name) {
               return "Hello, " + name;
-            }
+            };
             
-            console.log(greet("World"));`}
+            console.log(greet("World"));
+            `}
           </pre>
         ) : (
           <div className="border-dashed border border-gray-300 bg-gray-50 p-6 rounded-md text-center text-gray-500">
